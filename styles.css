@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+}
+.row_div {
+    display: flex;
+    flex-direction: column;
+    
+}
+.border {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+}
+
+.color_blue{
+    background-color: blue;
+}
