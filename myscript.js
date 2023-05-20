@@ -31,11 +31,19 @@ const allDiv = document.querySelectorAll(".border")
 
 allDiv.forEach((div)=>{
     div.addEventListener("mouseover", () => {
-        div.classList.add("color_blue");
+        if(div.style.backgroundColor === ""){
+        div.style.backgroundColor = generateRandomRGB();
+        }
     })
 })
 }
 
+function generateRandomRGB(){
+    let r = Math.floor(Math.random()*255);
+    let g = Math.floor(Math.random()*255);
+    let b = Math.floor(Math.random()*255);
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+}
 function deleteGrid(){
     const allDiv = document.querySelectorAll(".border")
     allDiv.forEach((div)=>{
